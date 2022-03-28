@@ -1,6 +1,5 @@
 package br.com.etechoracio.hasfoodapi.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,21 +13,22 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "TBL_ENTREGA")
-public class Entrega {
+@Table(name = "TBL_AVALIACAO")
+public class Avaliacao {
 	@Id
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name = "ID_ENTREGA")
+	@Column(name = "ID_AVALIACAO")
 	private Long id;
 	
-	@Column(name = "TX_NOME_CLIENTE")
-	private String nome_cliente;
-	
-	@Column(name = "TX_ENDERECO")
-	private String endereco;
+	@Column(name = "TX_COMENTARIO")
+	private String comentario;
+
+	@Column(name = "NR_NOTA")
+	private int nota;
 	
 	@Column(name = "ID_PEDIDO")
 	private Long id_pedido;
+
 }
